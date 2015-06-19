@@ -1,0 +1,14 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: senid
+  pool: 5
+
+
+development:
+  <<: *default
+  database: peeps_dev
+
+test:
+  <<: *default
+  database: peeps_test
